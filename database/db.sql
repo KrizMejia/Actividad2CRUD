@@ -7,6 +7,13 @@ CREATE TABLE Proveedores (
   Prov_Telefono VARCHAR(20) NOT NULL
 );
 
+CREATE TABLE Proveedores (
+  Prov_NIT VARCHAR(50) NOT NULL PRIMARY KEY,
+  Prov_Nombre VARCHAR(50) NOT NULL,
+  Prov_Direccion VARCHAR(100) NOT NULL,
+  Prov_Telefono VARCHAR(20) NOT NULL
+);
+
 
 CREATE TABLE Grupos (
   Grp_Codigo INT NOT NULL PRIMARY KEY,
@@ -28,6 +35,8 @@ CREATE TABLE Clientes (
   Cli_Direccion VARCHAR(100) NOT NULL,
   Cli_Telefono VARCHAR(20) NOT NULL
 );
+
+
 
 CREATE TABLE Almacenes (
   Alm_Codigo INT NOT NULL PRIMARY KEY,
