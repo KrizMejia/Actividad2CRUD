@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PROVEEDORES INVENTARIO MERCA FACIL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand"> EDITAR PROVEEDORES INVENTARIO_MERCA_FACIL</a>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class=" card-body">
+                        <form action="/update/<%= data.Prov_NIT %>" method="post">
+                            <div class="form-group">
+                                <input type="text" name="Prov_NIT" value="<%= data.Prov_NIT %>" placeholder="Nit del proveedor" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="Prov_Nombre" value="<%= data.Prov_Nombre %>" placeholder="Nombre del proveedor"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="Prov_Direccion" value="<%= data.Prov_Direccion %>"placeholder="Dirección del proveedor"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="Prov_Telefono" value="<%= data.Prov_Telefono %>"placeholder="Telefono del proveedor"
+                                    class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Editar Proveedor
+                            </button>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
