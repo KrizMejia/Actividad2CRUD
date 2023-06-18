@@ -1,0 +1,20 @@
+
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://crizmejia:123456789@127.0.0.1:3306/inventario_merca_facil"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model proveedores {
+  Prov_NIT       String   @id @db.VarChar(50)
+  Prov_Nombre    String   @db.VarChar(50)
+  Prov_Direccion String   @db.VarChar(100)
+  Prov_Telefono  String   @db.VarChar(20)
+}
+
+
+

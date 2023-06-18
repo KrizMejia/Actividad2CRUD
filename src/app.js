@@ -11,7 +11,7 @@ const proveedoresRoutes = require('./routes/proveedores'); // Ya tengo todas est
 
 
 // Settings
-app.set('port', process.env.PORT || 3001); // Process, revisar si hay un puerto y si no existe que use el puerto 3000
+app.set('port', process.env.PORT || 3001); // Process, revisar si hay un puerto y si no existe que use el puerto 3001
 app.set("view engine", "ejs") // View engine, motor de plantillas, este será ejs // Express ya sabe que usaremos ejs como el motor de plantillas
 // Vamos a decirle donde está mi carpeta views: 
 app.set("views", path.join(__dirname, "views")); // En el segundo parámetro vamos a decirle donde está la carpeta, la dirección. path. se une con los directorios que recibirá como parámetro. 
@@ -23,6 +23,9 @@ app.set("views", path.join(__dirname, "views")); // En el segundo parámetro vam
 // Para esto requerimos morgan
 app.use(morgan("dev")); // Para mostrar algunos mensajes por consola sencillos
 // Ahora vamos a conectarlo con My sql
+
+
+/*
 app.use(myConnection(mysql, { // Recibira como parámetro el módulo que conecta a la base de datos  y los datos de la conexión
     host: "localhost",
     user: "crizmejia",
@@ -30,6 +33,8 @@ app.use(myConnection(mysql, { // Recibira como parámetro el módulo que conecta
     port: 3306,
     database: "inventario_merca_facil"
 }, "single")); // Entre comillas como estaremos conectándonos con nuestro servidor
+
+*/
 
 
 // Este middleware es para guardar los usuarios
